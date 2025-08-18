@@ -1,0 +1,64 @@
+.carousel {
+    height: auto;
+    overflow: hidden;
+    flex: 0 0 50%;
+    padding: 0;
+    border-color: var(--white);
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing32);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: var(--spacing16) 0;
+    margin-top: auto;
+}
+
+.dot {
+    height: 10px;
+    flex: 0 0 10px;
+    border-radius: 50%;
+    border: none;
+    background: var(--light-grey);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    outline: none;
+    padding: 0;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    &.active {
+        background: var(--primary-pink);
+    }
+}

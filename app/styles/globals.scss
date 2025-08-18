@@ -1,0 +1,268 @@
+@import "variables.scss";
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background: var(--black);
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-yanone), sans-serif;
+    font-size: var(--text1);
+}
+
+span,
+p,
+div,
+a {
+    color: inherit;
+    text-decoration: none;
+    line-height: var(--line-height);
+}
+
+input,
+textarea,
+button {
+    border-radius: var(--border-radius);
+    font-size: var(--text1);
+    font-weight: 600;
+    color: var(--white);
+    outline: none;
+    border: none;
+
+    &:focus-visible {
+        outline: 3px solid var(--primary-pink-40);
+    }
+}
+
+button {
+    padding: var(--spacing12) var(--spacing24);
+    background: var(--primary-pink);
+    outline-offset: 3px;
+
+    &:disabled {
+        background: var(--grey);
+        pointer-events: none;
+    }
+}
+
+input,
+textarea {
+    padding: var(--spacing16) var(--spacing24);
+    background: #00000030;
+}
+
+::placeholder {
+    color: var(--grey);
+}
+
+/**
+ * The glass cards
+ */
+.glass {
+    background: rgba(115, 115, 115, 0.19);
+    border-radius: var(--border-radius-big);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: var(--spacing32);
+    border: 3px solid var(--primary-pink-40);
+    color: var(--white);
+    overflow: hidden;
+    font-size: 1.3rem;
+    transition: border 2s !important;
+    width: 100%;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    &.blue {
+        border: 3px solid var(--primary-purple-40);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .glass {
+        padding: var(--spacing24);
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .glass {
+        padding: var(--spacing16);
+
+        h1:first-child,
+        h2:first-child,
+        h3:first-child,
+        h4:first-child,
+        h5:first-child {
+            padding-top: var(--spacing8);
+        }
+    }
+}
+
+/**
+ * General page layout
+ */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+        width: 100vw;
+        display: flex;
+        max-width: 96rem;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacing64);
+
+        h1,
+        h2,
+        h1 span {
+            color: var(--primary-pink);
+        }
+
+        & > h1,
+        & > h2 {
+            width: 100%;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(-20rem);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: var(--heading1);
+
+            span {
+                font-size: var(--heading1);
+                transform: translateY(-20rem);
+                display: inline-block;
+                animation: floating 1s cubic-bezier(0.47, 1.64, 0.41, 0.8) forwards;
+            }
+        }
+
+        h2 {
+            font-size: var(--heading2);
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        h3 {
+            font-size: var(--heading3);
+        }
+
+        h4 {
+            font-size: var(--heading4);
+        }
+    }
+
+    .text {
+        h2 {
+            margin-top: var(--spacing32);
+            margin-bottom: var(--spacing24);
+            line-height: 1;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        h3 {
+            margin-top: var(--spacing24);
+            margin-bottom: var(--spacing16);
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        h4 {
+            margin-top: var(--spacing16);
+            margin-bottom: var(--spacing12);
+        }
+
+        ul,
+        li {
+            margin-top: var(--spacing16);
+            margin-bottom: var(--spacing16);
+            margin-left: var(--spacing16);
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .page {
+        section {
+            h1 {
+                margin-top: var(--spacing16);
+            }
+
+            padding: var(--spacing48);
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .page {
+        section {
+            h1 {
+                margin-top: var(--spacing32);
+            }
+
+            padding: var(--spacing32);
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .page {
+        section {
+            padding: var(--spacing16);
+        }
+    }
+}
+
+.homeLink {
+    font-size: var(--heading3);
+    font-weight: 600;
+    margin-bottom: var(--spacing32);
+    color: var(--primary-pink);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing32);
+    margin-bottom: var(--spacing64);
+    color: var(--primary-pink);
+    gap: var(--spacing16);
+
+    a {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+}

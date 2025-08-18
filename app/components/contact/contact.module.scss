@@ -1,0 +1,30 @@
+.contactForm {
+    margin-top: var(--spacing24);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1 1 auto;
+
+    input,
+    textarea,
+    h4 {
+        width: 100%;
+    }
+
+    textarea {
+        flex: 1 1 auto;
+    }
+
+    h4 {
+        margin-bottom: var(--spacing8);
+    }
+
+    input {
+        margin-bottom: var(--spacing24);
+    }
+
+    button {
+        margin-top: var(--spacing24);
+    }
+}

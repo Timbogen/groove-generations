@@ -1,0 +1,38 @@
+{
+    "name": "groove-generations",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "deploy": "tsx scripts/deploy.ts",
+        "dev": "next dev",
+        "lint": "next lint",
+        "sortpackagejson": "npx sort-package-json",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@ctrl/tinycolor": "^4.1.0",
+        "@react-three/drei": "^9.114.6",
+        "@react-three/fiber": "^8.17.10",
+        "@types/three": "^0.169.0",
+        "clsx": "^2.1.1",
+        "embla-carousel-react": "^8.3.0",
+        "embla-carousel-wheel-gestures": "^8.0.1",
+        "next": "14.2.15",
+        "react": "^18",
+        "react-dom": "^18",
+        "three": "^0.169.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@weichwarenprojekt/configuration": "^0.2.0",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.15",
+        "prettier": "^3.3.3",
+        "sass": "^1.80.3",
+        "tsx": "^4.19.1",
+        "typescript": "^5"
+    }
+}

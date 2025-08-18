@@ -1,0 +1,100 @@
+.tokenWrapper {
+    animation: fadeIn 1.5s forwards;
+    transform: translateY(20rem);
+
+    @keyframes fadeIn {
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .token {
+        border: 3px solid var(--primary-pink-40);
+        width: 10rem;
+        height: 10rem;
+        border-radius: var(--border-radius-big);
+        margin-bottom: 2rem;
+        backdrop-filter: blur(20px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: rotation 6s infinite linear;
+        animation-delay: 2s;
+        transform-style: preserve-3d;
+        --z-index: 20;
+
+        & > * {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: absolute;
+            inset: var(--spacing16);
+            width: auto;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        & > .image {
+            z-index: var(--z-index);
+        }
+
+        .scrollHint {
+            transform: translateZ(-1px);
+            display: flex;
+            background: var(--primary-pink);
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+
+            .scrollDown {
+                border: 2px solid var(--white);
+                width: 2rem;
+                height: 3.8rem;
+                border-radius: 1rem;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    background: var(--white);
+                    width: var(--spacing10);
+                    height: var(--spacing10);
+                    position: absolute;
+                    border-radius: 50%;
+                    top: 0.5rem;
+                    left: 50%;
+                    transform: translate(-50%);
+                    animation: scroll 2s infinite;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes scroll {
+                20% {
+                    opacity: 1;
+                }
+                40% {
+                    opacity: 1;
+                }
+                60% {
+                    top: calc(100% - 1rem);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    @keyframes rotation {
+        50% {
+            --z-index: 0;
+        }
+
+        100% {
+            transform: rotate3d(0, 1, 0, 360deg);
+            --z-index: 20;
+        }
+    }
+}
