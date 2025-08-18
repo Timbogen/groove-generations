@@ -4,12 +4,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import clsx from "clsx";
 import styles from "./pa-carousel.module.scss";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 export const PACarousel = () => {
     const options = { loop: true };
     const slides = ["everse-bundle", "everse12"];
 
-    const [emblaRef, emblaApi] = useEmblaCarousel(options);
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [WheelGesturesPlugin()]);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const onSelect = useCallback(() => {
@@ -17,10 +18,13 @@ export const PACarousel = () => {
         setSelectedIndex(emblaApi.selectedScrollSnap());
     }, [emblaApi]);
 
-    const scrollTo = useCallback((index: number) => {
-        if (!emblaApi) return;
-        emblaApi.scrollTo(index);
-    }, [emblaApi]);
+    const scrollTo = useCallback(
+        (index: number) => {
+            if (!emblaApi) return;
+            emblaApi.scrollTo(index);
+        },
+        [emblaApi],
+    );
 
     useEffect(() => {
         if (!emblaApi) return;
