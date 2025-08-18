@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Gallery } from "@/app/components/gallery/gallery";
 import { PACarousel } from "@/app/components/pa-carousel/pa-carousel";
 import { useProgress } from "@react-three/drei";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Contact } from "@/app/components/contact/contact";
 import dynamic from "next/dynamic";
 
@@ -105,7 +105,7 @@ export default function Home() {
                                 Aktivlautsprecher-System
                             </li>
                             <li>
-                                <strong>2x 12" EV Everse</strong> - Mobile Lautsprecher mit integriertem Akku
+                                <strong>2x 12&quot; EV Everse</strong> - Mobile Lautsprecher mit integriertem Akku
                             </li>
                         </ul>
 
