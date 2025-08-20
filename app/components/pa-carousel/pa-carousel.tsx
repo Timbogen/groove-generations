@@ -8,7 +8,7 @@ import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 export const PACarousel = () => {
     const options = { loop: true };
-    const slides = ["everse-bundle", "everse12"];
+    const slides = ["everse-bundle", "everse12", "controller"];
 
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [WheelGesturesPlugin()]);
     const [selectedIndex, setSelectedIndex] = useState(0);

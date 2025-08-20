@@ -12,7 +12,7 @@ export default function Imprint() {
                     {"<"} Home
                 </Link>
                 <div className={"glass"}>
-                    <h3>Tim Niederer</h3>
+                    <h3>Matthias Schmid</h3>
                     <p>
                         Karlstra&szlig;e 101
                         <br />
@@ -23,9 +23,9 @@ export default function Imprint() {
                     <br />
                     <h3>Kontakt</h3>
                     <p>
-                        Telefon: 01712089964
+                        Telefon: +49 157 86502950
                         <br />
-                        E-Mail: niederer.tim@gmail.com
+                        E-Mail: contact@groovegenerations.de
                     </p>
                     <p>
                         Quelle:{" "}

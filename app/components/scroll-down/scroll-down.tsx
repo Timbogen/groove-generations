@@ -5,16 +5,23 @@ import styles from "./scroll-down.module.scss";
 import { useProgress } from "@react-three/drei";
 
 /**
+ * The properties for {@link ScrollDown}
+ */
+export interface ScrollDownProps {
+    isDaddy?: boolean;
+}
+
+/**
  * The scroll down indicator
  */
-export default function ScrollDown () {
+export default function ScrollDown({ isDaddy }: ScrollDownProps) {
     const { progress } = useProgress();
     if (progress < 100) return <></>;
     return (
         <div className={styles.tokenWrapper}>
             <div className={styles.token}>
                 <div className={styles.image}>
-                    <img alt={""} src={"/img/daddy.png"} />
+                    <img alt={""} src={isDaddy ? "/img/daddy.png" : "/img/sonny.png"} />
                 </div>
                 <div className={styles.scrollHint}>
                     <div className={styles.scrollDown}></div>
@@ -22,4 +29,4 @@ export default function ScrollDown () {
             </div>
         </div>
     );
-};
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /** The color spectrum */
-export const pink = "#ff54ab";
+export const pink = "#ff7354";
 export const purple = "#b554ff";
 
 /** Clamp a numeric value */

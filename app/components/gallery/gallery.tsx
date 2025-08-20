@@ -17,7 +17,7 @@ const tweenFactorBase = 0.3;
  */
 export const Gallery = () => {
     const options = { loop: true };
-    const slides = ["cool", "llama", "sheep", "beer", "dd"];
+    const slides = ["gleis1", "gleis2", "ice", "early", "food", "gleis3"];
     const [showCarousel, setShowCarousel] = useState(false);
 
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [WheelGesturesPlugin()]);
@@ -96,7 +96,7 @@ export const Gallery = () => {
                     {slides.map((value, index) => (
                         <div className={styles.slide} key={index}>
                             <div className={clsx(styles.card, "glass", "blue")}>
-                                <img alt={value} src={`/img/${value}.png`} />
+                                <img alt={value} src={`/img/${value}.jpg`} />
                             </div>
                         </div>
                     ))}

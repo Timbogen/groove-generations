@@ -42,7 +42,7 @@ button {
     border: none;
 
     &:focus-visible {
-        outline: 3px solid var(--primary-pink-40);
+        outline: 3px solid var(--primary-pink-50);
     }
 }
 
@@ -76,7 +76,7 @@ textarea {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: var(--spacing32);
-    border: 3px solid var(--primary-pink-40);
+    border: 3px solid var(--primary-pink-50);
     color: var(--white);
     overflow: hidden;
     font-size: 1.3rem;
@@ -88,7 +88,7 @@ textarea {
     }
 
     &.blue {
-        border: 3px solid var(--primary-purple-40);
+        border: 3px solid var(--primary-purple-50);
     }
 }
 
